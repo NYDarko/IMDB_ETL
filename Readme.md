@@ -1,13 +1,16 @@
-ETL Script for CSV to PostgreSQL
-Overview
+# README: ETL Script for CSV to PostgreSQL
+
+## Overview
 This project is an ETL (Extract, Transform, Load) script designed to ingest data from CSV files into a PostgreSQL database. The script connects to a PostgreSQL instance using credentials stored in an environment file (.env), processes CSV data using pandas, and executes queries to interact with the database.
 
-Features
+## Features
+
 Flexible Environment Configuration: Uses .env to securely manage database connection parameters.
 Data Ingestion: Reads multiple CSV files and prepares the data for ingestion into PostgreSQL.
 Dynamic Column Retrieval: Automatically retrieves column names from CSV files for table schema definition.
 Database Querying: Executes SQL queries to interact with PostgreSQL tables.
-Prerequisites
+
+## Prerequisites
 1. Software Requirements
 Python 3.8+
 PostgreSQL database
@@ -19,17 +22,19 @@ python-dotenv
 2. Environment Configuration
 Create a .env file in the project directory with the following format:
 
-makefile
-Copy code
+bash '''
+
 DB_HOST=your_database_host
 DB_USER=your_database_username
 DB_PASSWORD=your_database_password
 DB_NAME=your_database_name
 DB_PORT=your_database_port
+
+'''
 Replace the placeholders with your actual database credentials.
 
-Installation
-Step 1: Clone the Repository
+## Installation
+Step 1:  Clone the Repository
 bash
 Copy code
 git clone <repository_url>
@@ -94,3 +99,5 @@ Automated Table Creation: Extend the script to dynamically create PostgreSQL tab
 Data Validation: Add validation to check CSV data integrity before ingestion.
 Command-line Arguments: Allow users to specify input files and table names via CLI.
 Batch Processing: Handle large CSV files using chunk-based ingestion.
+License
+This project is licensed under the MIT License
